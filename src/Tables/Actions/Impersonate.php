@@ -1,9 +1,9 @@
 <?php
 
-namespace STS\FilamentImpersonate\Tables\Actions;
+namespace Alqabali\FilamentImpersonate\Tables\Actions;
 
 use Filament\Tables\Actions\Action;
-use STS\FilamentImpersonate\Concerns\Impersonates;
+use Alqabali\FilamentImpersonate\Concerns\Impersonates;
 
 class Impersonate extends Action
 {
@@ -15,7 +15,6 @@ class Impersonate extends Action
 
         $this
             ->label(__('filament-impersonate::action.label'))
-            ->iconButton()
             ->icon('impersonate-icon')
             ->action(fn ($record) => $this->impersonate($record))
             ->hidden(fn ($record) => !$this->canBeImpersonated($record));

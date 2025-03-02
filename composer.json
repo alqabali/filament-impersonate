@@ -1,5 +1,5 @@
 {
-    "name": "stechstudio/filament-impersonate",
+    "name": "alqabali/filament-impersonate",
     "description": "A Filament package to impersonate your users.",
     "type": "library",
     "minimum-stability": "dev",
@@ -10,13 +10,13 @@
     },
     "autoload": {
         "psr-4": {
-            "STS\\FilamentImpersonate\\": "src/"
+            "Alqabali\\FilamentImpersonate\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "STS\\FilamentImpersonate\\FilamentImpersonateServiceProvider"
+                "Alqabali\\FilamentImpersonate\\FilamentImpersonateServiceProvider"
             ]
         }
     }

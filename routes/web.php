@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Lab404\Impersonate\Services\ImpersonateManager;
 
-Route::get('filament-impersonate/leave', function() {
+Route::get('impersonate/leave', function() {
     if(!app(ImpersonateManager::class)->isImpersonating()) {
         return redirect('/');
     }

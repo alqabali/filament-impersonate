@@ -3,7 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/stechstudio/filament-impersonate.svg?style=flat-square)](https://packagist.org/packages/stechstudio/filament-impersonate)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
-This is a plugin for [Filament](https://filamentadmin.com/) that makes it easy to impersonate your users. 
+This is a plugin for [Filament](https://filamentadmin.com/) that makes it easy to impersonate your users.
 
 ### Credit
 
@@ -29,7 +29,7 @@ Go down to the `table` method. After defining the table columns, you want to add
 namespace App\Filament\Resources;
 
 use Filament\Resources\Resource;
-use STS\FilamentImpersonate\Tables\Actions\Impersonate;
+use Alqabali\FilamentImpersonate\Tables\Actions\Impersonate;
 
 class UserResource extends Resource {
     public static function table(Table $table)
@@ -39,7 +39,7 @@ class UserResource extends Resource {
                 // ...
             ])
             ->actions([
-                Impersonate::make(), // <--- 
+                Impersonate::make(), // <---
             ]);
     }
 ```
@@ -51,12 +51,12 @@ Impersonate::make('impersonate')
     ->guard('another-guard')
     ->redirectTo(route('some.other.route'));
 ```
-    
+
 ### 2. Add the page action
 
 Now open the page where you would want the button to appear, this will commonly be `EditUser`;
 
-Go to the `getActions` method and add the `Impersonate` page action here. 
+Go to the `getActions` method and add the `Impersonate` page action here.
 
 ```php
 <?php
@@ -64,7 +64,7 @@ namespace App\Filament\Resources\UserResource\Pages;
 
 use App\Filament\Resources\UserResource;
 use Filament\Resources\Pages\EditRecord;
-use STS\FilamentImpersonate\Pages\Actions\Impersonate;
+use Alqabali\FilamentImpersonate\Pages\Actions\Impersonate;
 
 class EditUser extends EditRecord
 {
@@ -106,12 +106,12 @@ By default, only Filament admins can impersonate other users. You can control th
 
 ```php
 class User implements FilamentUser {
-    
+
     public function canImpersonate()
     {
         return true;
     }
-    
+
 }
 ```
 
@@ -125,13 +125,13 @@ class User {
         // Let's prevent impersonating other users at our own company
         return !Str::endsWith($this->email, '@mycorp.com');
     }
-    
+
 }
-``` 
+```
 
 ## Customizing the banner
 
-The blade component has a few options you can customize. 
+The blade component has a few options you can customize.
 
 ### Style
 
