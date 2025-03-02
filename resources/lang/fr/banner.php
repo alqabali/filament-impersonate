@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'impersonating' => 'Vous êtes en train de vous faire passer pour',
+    'impersonating' => "Usurpation en tant qu' utilisateur",
     'leave' => 'Quitter',
 ];
