@@ -2,7 +2,7 @@
 
 namespace Alqabali\FilamentImpersonate\Pages\Actions;
 
-use Filament\Pages\Actions\Action;
+use Filament\Actions\Action;
 use Alqabali\FilamentImpersonate\Concerns\Impersonates;
 
 class Impersonate extends Action
